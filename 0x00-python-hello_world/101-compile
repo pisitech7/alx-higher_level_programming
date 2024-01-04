@@ -1,0 +1,25 @@
+#!/bin/bash
+export PYFILE=my_script.py
+# Check if the environment variable PYFILE is set
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Check if the specified Python file exists
+if [ ! -f "$PYFILE" ]; then
+    echo "Error: Specified Python file '$PYFILE' does not exist."
+    exit 1
+fi
+
+# Compile the Python file
+python -m py_compile "$PYFILE"
+
+# Get the compiled filename
+compiled_filename=$(python -c "import os; print(os.path.splitext('$PYFILE')[0] + '.pyc')")
+
+# Rename the compiled file to match the output filename ($PYFILEc)
+mv -f "$compiled_filename" "$PYFILE"c
+
+echo "Compilation successful: $PYFILE compiled to $PYFILEc"
+
