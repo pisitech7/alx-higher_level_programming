@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-# Printing numbers from 0 to 99 in the specified format
-for i in range(100):
-    if i < 10:
-        print('{:02d}'.format(i), end=", " if i != 99 else "\n")
-    else:
-        print('{:d}'.format(i), end=", " if i != 99 else "\n")
+# Printing numbers from 0 to 98 in decimal and hexadecimal format
+for i in range(99):
+    print("{:d} {}".format(i, hex(i)), end=(", " if i != 98 else "\n"))
