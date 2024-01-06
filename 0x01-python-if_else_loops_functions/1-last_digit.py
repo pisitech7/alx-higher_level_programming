@@ -6,7 +6,7 @@ import random
 number = random.randint(-10000, 10000)
 
 # Finding the last digit of the number
-last_digit = abs(number) % 10
+last_digit = number % 10  # Remove abs() to maintain sign
 
 # Printing the last digit and its characteristics
 print(f"Last digit of {number} is {last_digit}", end=" ")
