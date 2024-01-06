@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-# Printing numbers from 0 to 98 in decimal and hexadecimal format
-for i in range(99):
+
+# Printing numbers from 0 to 99 in the specified format
+for i in range(100):
     if i < 10:
-        print(f"0{i} 0x0{i}")
+        print(f"0{i}", end=", " if i < 99 else "\n")
     else:
-        print(f"{i} 0x{i}")
+        print(f"{i}", end=", " if i < 99 else "\n")
