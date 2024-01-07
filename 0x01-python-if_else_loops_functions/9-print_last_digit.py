@@ -7,11 +7,7 @@ def print_last_digit(number):
     last_digit = number % 10
 
     # Print the last digit
-    print("The last digit is:", last_digit)
+    print(last_digit)
 
     # Return the last digit value
     return last_digit
-
-# Test the function
-number = 987654321
-result = print_last_digit(number)
