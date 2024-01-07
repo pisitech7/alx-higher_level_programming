@@ -12,5 +12,6 @@ def fizzbuzz():
             output += str(i) + " "
     print(output.rstrip())
 
+
 # Call the function
 fizzbuzz()
