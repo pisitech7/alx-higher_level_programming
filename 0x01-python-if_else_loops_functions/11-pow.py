@@ -5,16 +5,11 @@ def pow(a, b):
         return 1
     elif b > 0:
         result = 1
-        for i in range(b):
+        for _ in range(b):
             result *= a
         return result
     else:
         result = 1.0
-        for i in range(abs(b)):
+        for _ in range(abs(b)):
             result /= a
         return result
-
-# Test the function
-result = pow(2, 3)
-print("Result:", result)
-
