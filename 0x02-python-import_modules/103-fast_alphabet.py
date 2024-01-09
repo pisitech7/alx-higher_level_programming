@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-import functools
+import sys
 
-print(functools.reduce(lambda x, y: x + y, map(chr, range(65, 91))))
+sys.stdout.write(''.join(chr(c) for c in range(65, 91)) + '\n')
