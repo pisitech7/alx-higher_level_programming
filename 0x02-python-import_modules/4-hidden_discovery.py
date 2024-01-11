@@ -3,6 +3,7 @@ import dis
 import os
 
 def print_hidden_names():
+if __name__ == "__main__":
     file_path = 'hidden_4.pyc'
     if os.path.exists(file_path):
         with open(file_path, 'rb') as file:
@@ -10,6 +11,4 @@ def print_hidden_names():
             dis.dis(code)
     else:
         print("File 'hidden_4.pyc' not found.")
-
-if __name__ == "__main__":
     print_hidden_names()
