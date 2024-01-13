@@ -1,15 +1,7 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    # Create a new list to store the modified elements
-    new_list = []
-
-    # Iterate through the original list and replace elements as needed
-    for item in my_list:
-        # If the element matches 'search', replace it with 'replace'
-        if item == search:
-            new_list.append(replace)
-        else:
-            new_list.append(item)
+    # Use map and lambda to replace elements as needed
+    new_list = list(map(lambda x: replace if x == search else x, my_list))
 
     return new_list
 
